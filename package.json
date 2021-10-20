@@ -1,0 +1,14 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/donga-93/custom-lodash.git",
+  "author": "donga-93 <zazadongadz2@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}
