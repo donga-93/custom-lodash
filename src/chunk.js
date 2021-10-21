@@ -1,17 +1,18 @@
-function chunk(array, size = 1) {
-    let newArray = [];
-        let length = Math.ceil(array.length / size);
-        for (let i = 0; i < length; i++){
-            newArray[i] = [];
-            for (let j = 0; j < size; j++) {
-                if (i * size + j >= array.length){
-                    break;
-                }
+const mySpliceRomovedItems = require('../src/shared/splice-removed-items');
+const myPush = require('../src/shared/push');
+const mySplicedArray = require('../src/shared/splice-array');
+const myLength = require('../src/shared/length');
 
-                newArray[i][j] = array[i*size + j];
-            }
-        }
-        return newArray;
-}
+const chunk = (array, size) => {
+  const results = [];
 
-module.exports = chunk
+  while (myLength(array)) {
+    const removed = mySpliceRomovedItems(array, 0, size);
+    myPush(results, removed);
+    // eslint-disable-next-line no-param-reassign
+    array = mySplicedArray(array, 0, size);
+  }
+  return results;
+};
+
+module.exports = chunk;
