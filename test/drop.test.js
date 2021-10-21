@@ -1,5 +1,7 @@
 const drop = require('../src/drop');
 
-drop('saxeli', ()=>{
-    expect([1, 2, 3]).toStrictEqual([2, 3]);
-})
+test('drop should return an empty array if n is more, than array length', () => {
+  const array = [1, 2, 3];
+  expect(drop(array, 5)).toEqual([]);
+});
+
