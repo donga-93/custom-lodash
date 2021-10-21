@@ -6,7 +6,7 @@
   "author": "donga-93 <zazadongadz2@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "devDependencies": {
     "jest": "^27.3.1"
